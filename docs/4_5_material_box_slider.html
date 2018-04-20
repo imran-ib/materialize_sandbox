@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Carousel</h1>
+      <h1 class="center-align">Material Box & Slider</h1>
     </div>
   </div>
   <div class="container">
@@ -124,74 +124,45 @@
 
     <!-- START HERE -->
 
-    <!-- CAROUSEL -->
-    <div>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
+    <div class="row">
+      <div class="col s12 m6">
+        <!-- MATERIAL BOX -->
+        <img src="img/img1.jpg" class="materialboxed" width="100%">
+      </div>
+      <div class="col s12 m6">
+        <!-- WITH CAPTION -->
+        <img src="img/img2.jpg" class="materialboxed" width="100%" data-caption="This is my awesome photo">
+      </div>
     </div>
 
-    <!-- FULL WIDTH CAROUSEL -->
-    <div>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-      <a href="">
-        <img src="">
-      </a>
-    </div>
-
-    <!-- CONTENT SLIDER -->
-    <div>
-      <div href="">
-        <h2>Panel One</h2>
-        <p>This is panel one</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
-      <div href="">
-        <h2>Panel Two</h2>
-        <p>This is panel two</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
-      <div href="">
-        <h2>Panel Three</h2>
-        <p>This is panel three</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
-      <div href="">
-        <h2>Panel Four</h2>
-        <p>This is panel four</p>
-        <div>
-          <a>button</a>
-        </div>
-      </div>
+    <!-- SLIDER -->
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img src="img/img3.jpg">
+          <!-- CENTER ALIGN CAPTION -->
+          <div class="caption center-align">
+            <h3 class="black-text">Center Caption</h3>
+            <h5 class="black-text">Lorem ipsum dolor sit amet.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="img/img4.jpg">
+          <!-- LEFT ALIGN CAPTION -->
+          <div class="caption left-align">
+            <h3>Left Align Caption</h3>
+            <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet.</h5>
+          </div>
+        </li>
+        <li>
+          <img src="img/img5.jpg">
+          <!-- RIGHT ALIGN CAPTION -->
+          <div class="caption right-align">
+            <h3>Right Align Caption</h3>
+            <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet.</h5>
+          </div>
+        </li>
+      </ul>
     </div>
 
 
@@ -217,7 +188,12 @@
       });
 
       // JAVASCRIPT START HERE //
-
+      $('.slider').slider({
+        indicators: true,
+        height: 400,
+        transition: 500,
+        interval: 6000
+      });
 
 
 

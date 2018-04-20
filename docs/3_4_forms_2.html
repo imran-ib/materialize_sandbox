@@ -11,12 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Materialize Sandbox</title>
+
 </head>
 
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Parallax</h1>
+      <h1 class="center-align">Fancy Form & Input</h1>
     </div>
   </div>
   <div class="container">
@@ -123,34 +124,89 @@
     <br>
 
     <!-- START HERE -->
+    <form>
+      <!-- SWITCH -->
+      <div class="switch">
+        <label>
+          Disable
+          <input type="checkbox" checked>
+          <span class="lever"></span>
+          Enable
+        </label>
+      </div>
 
-    <!-- PARALLAX -->
-    <div>
-      <div>
-        <img src="">
+      <!-- DISABLED SWITCH -->
+      <div class="switch">
+        <label>
+          Disable
+          <input type="checkbox">
+          <span class="lever"></span>
+          Enable
+        </label>
       </div>
-    </div>
-    <div>
-      <div>
-        <h2>Parallax Example</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores doloremque accusantium veniam modi ea non quisquam
-          corporis. Doloremque error, dolore, perspiciatis reprehenderit soluta vitae, at quisquam dolorum sequi quidem veritatis
-          amet earum nihil illo dignissimos dicta! Hic nesciunt animi distinctio!</p>
+
+      <br>
+      <br>
+
+      <!-- FILE INPUT -->
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Upload File</span>
+          <input type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input type="text" class="file-path">
+        </div>
       </div>
-    </div>
-    <div>
-      <div>
-        <img src="">
+
+      <!-- RANGE SLIDER -->
+      <p class="range-field">
+        <input type="range" min="0" max="100">
+      </p>
+
+      <!-- DATE PICKER -->
+      <div class="input-field">
+        <input type="text" class="datepicker" id="date">
+        <label for="date">Choose a Date</label>
       </div>
-    </div>
+
+      <!-- TIME PICKER -->
+      <div>
+        <input type="text" class="timepicker" id="time">
+        <label for="time">Choose a Time</label>
+      </div>
+
+      <!-- CHARACTER COUNTER -->
+      <div>
+        <input id="post" type="text" data-length="20">
+        <label for="post">Post</label>
+      </div>
+
+      <!-- AUTOCOMPLETE -->
+      <div>
+        <input type="text" id="fruit" class="autocomplete">
+        <label for="fruit">Type a Fruit</label>
+      </div>
+
+      <br>
+      <br>
+      <div>
+        <input type="submit" value="Submit" class="btn">
+      </div>
+    </form>
+
 
 
     <!-- END HERE -->
 
 
+
+
   </div>
   <!-- ./ CONTAINER END -->
 
+  <!-- MOVES CONTENT UP -->
+  <div style="margin-top: 500px;"></div>
 
 
   <!--Import jQuery before materialize.js-->
@@ -166,11 +222,39 @@
         alignment: 'left'
       });
 
-
       // JAVASCRIPT START HERE //
 
+      // INIT DATEPICKER
+      $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: 15,
+        closeOnSelect: true
+      });
 
+      // INIT TIMEPICKER
+      $('.timepicker').pickatime({
+        default: 'now',
+        twelvehour: true,
+        donetext: 'ok',
+        cleartext: 'clear',
+        canceltext: 'cancel',
+        autoclose: true
+      });
 
+      // INIT AUTOCOMPLETE
+      $('.autocomplete').autocomplete({
+        data: {
+          "Apple": null,
+          "Orange": null,
+          "Banana": null,
+          "Grapes": null,
+          "Strawberries": null,
+          "Pears": null,
+          "Plumbs": null,
+        },
+        limit: 20,
+        minLength: 2
+      });
 
     });
   </script>

@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Collections & Badges</h1>
+      <h1 class="center-align">Chips & Pagination</h1>
     </div>
   </div>
   <div class="container">
@@ -124,119 +124,79 @@
 
     <!-- START HERE -->
 
-    <!-- COLLECTION -->
-    <ul>
-      <li>First Item</li>
-      <li>Second Item</li>
-      <li>Third Item</li>
-      <li>Fourth Item</li>
-    </ul>
-
-    <!-- COLLECTION AS LINKS -->
-    <div>
-      <a href="#">First Item</a>
-      <a href="#">Second Item</a>
-      <a href="#">Third Item</a>
-      <a href="#">Fourth Item</a>
-      <!-- BADGES -->
-      <a href="#!">
-        <span>44</span>Fifth Item</a>
-      <a href="#!">
-        <span>3</span>Sixth Item</a>
+    <!-- CHIPS -->
+    <div class="chip">
+      Web development
+    </div>
+    <div class="chip">
+      Web design
+    </div>
+    <div class="chip">
+      Programming
     </div>
 
-    <!-- WITH HEADER -->
-    <ul>
-      <li>
-        <h4>Items</h4>
-      </li>
-      <li>First Item</li>
-      <li>Second Item</li>
-      <li>Third Item</li>
-      <li>Fourth Item</li>
-    </ul>
+    <br>
+    <br>
 
-    <!-- SECONDARY CONTENT -->
-    <ul>
-      <li>
-        <h4>Items</h4>
-      </li>
-      <li>
-        <div>First Item
-          <a href="#">
-            <i>/i>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>Second Item
-          <a href="#">
-            <i></i>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>Third Item
-          <a href="#">
-            <i></i>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div>Fourth Item
-          <a href="#">
-            <i></i>
-          </a>
-        </div>
-      </li>
-    </ul>
+    <!-- CHIPS WITH CLOSE -->
+    <div class="chip">
+      Web development
+      <i class="close material-icons">close</i>
+    </div>
+    <div class="chip">
+      Web design
+      <i class="close material-icons">close</i>
+    </div>
+    <div class="chip">
+      Programming
+      <i class="close material-icons">close</i>
+    </div>
 
-    <!-- AVATAR CONTENT -->
-    <ul>
-      <li>
-        <i></i>
-        <span>John Doe</span>
-        <p>jdoe@gmail.com
-          <br> 555-555-5555
-        </p>
-        <a href="#">
-          <i></i>
+    <br>
+    <br>
+
+    <!-- CHIPS WITH IMAGES -->
+    <div class="chip">
+      <img src="img/img1.jpg"> John Doe
+    </div>
+    <div class="chip">
+      <img src="img/img2.jpg"> Brian Jackson
+    </div>
+    <div class="chip">
+      <img src="img/img3.jpg"> Lori Smith
+    </div>
+
+    <!-- CHIPS INPUT WITH AUTOCOMPLETE-->
+    <div class="chips-input"></div>
+
+    <!-- PAGINATION -->
+    <ul class="pagination">
+      <li class="disabled">
+        <a href="#!">
+          <i class="material-icons">chevron_left</i>
         </a>
       </li>
-      <li>
-        <i></i>
-        <span>Brian Smith</span>
-        <p>bsmith@yahoo.com
-          <br> 444-444-4444
-        </p>
-        <a href="#">
-          <i></i>
-        </a>
+      <li class="waves-effect">
+        <a href="#!">1</a>
       </li>
-      <li>
-        <i></i>
-        <span>Jill Johnson</span>
-        <p>jill@gmail.com
-          <br> 333-333-3333
-        </p>
-        <a href="#">
-          <i></i>
-        </a>
+      <li class="waves-effect active">
+        <a href="#!">2</a>
       </li>
-      <li>
-        <i></i>
-        <span>Kevin Wallace</span>
-        <p>kevin@yahoo.com
-          <br> 888-888-8888
-        </p>
-        <a href="#">
-          <i></i>
+      <li class="waves-effect">
+        <a href="#!">3</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">4</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">5</a>
+      </li>
+      <li class="waves-effect">
+        <a href="#!">
+          <i class="material-icons">chevron_right</i>
         </a>
       </li>
     </ul>
-
-    <!-- BADGE IN DROPDOWN -->
-
 
     <!-- END HERE -->
 
@@ -244,7 +204,8 @@
   </div>
   <!-- ./ CONTAINER END -->
 
-
+  <!-- MOVES CONTENT UP -->
+  <div style="margin-top: 500px;"></div>
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -260,9 +221,22 @@
       });
 
       // JAVASCRIPT START HERE //
+      $('.chips-input').material_chip({
+        placeholder: 'Enter a tag',
+        secondaryPlaceholder: '+tag',
+        autocompleteOptions: {
+          data: {
+            'html': null,
+            'css': null,
+            'javascript': null
+          }
+        }
+      });
 
-
-
+      // ADD CHIP EVENT
+      $('.chips-input').on('chip.add', function (e, chip) {
+        console.log(`You added a chip - ${chip.tag}`);
+      });
 
     });
   </script>

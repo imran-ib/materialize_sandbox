@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Chips & Pagination</h1>
+      <h1 class="center-align">Collapsible</h1>
     </div>
   </div>
   <div class="container">
@@ -124,77 +124,62 @@
 
     <!-- START HERE -->
 
-    <!-- CHIPS -->
-    <div>
-      Web development
-    </div>
-    <div>
-      Web design
-    </div>
-    <div>
-      Programming
-    </div>
-
-    <br>
-    <br>
-
-    <!-- CHIPS WITH CLOSE -->
-    <div>
-      Web development
-      <i></i>
-    </div>
-    <div>
-      Web design
-      <i></i>
-    </div>
-    <div>
-      Programming
-      <i></i>
-    </div>
-
-    <br>
-    <br>
-
-    <!-- CHIPS WITH IMAGES -->
-    <div>
-      <img src=""> John Doe
-    </div>
-    <div>
-      <img src=""> Brian Jackson
-    </div>
-    <div>
-      <img src=""> Lori Smith
-    </div>
-
-    <!-- CHIPS INPUT WITH AUTOCOMPLETE-->
-    <div></div>
-
-    <!-- PAGINATION -->
-    <ul>
+    <!-- COLLAPSIBLE -->
+    <ul class="collapsible" data-collapsible="accordion">
       <li>
-        <a href="#!">
-          <i></i>
-        </a>
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i>First
+        </div>
+        <div class="collapsible-body">
+          <span>This is the first area</span>
+        </div>
       </li>
       <li>
-        <a href="#!">1</a>
+        <!-- pre select -->
+        <div class="collapsible-header active">
+          <i class="material-icons">help</i>Second
+        </div>
+        <div class="collapsible-body">
+          <span>This is the second area</span>
+        </div>
       </li>
       <li>
-        <a href="#!">2</a>
+        <div class="collapsible-header">
+          <i class="material-icons">info</i>Third
+        </div>
+        <div class="collapsible-body">
+          <span>This is the third area</span>
+        </div>
+      </li>
+    </ul>
+
+    <!-- EXPANDABLE COLLAPSIBLE -->
+
+    <ul class="collapsible" data-collapsible="expandable">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">group_work</i>First
+        </div>
+        <div class="collapsible-body">
+          <span>This is the first area</span>
+        </div>
       </li>
       <li>
-        <a href="#!">3</a>
+        <!-- pre select -->
+        <div class="collapsible-header active">
+          <i class="material-icons">help</i>Second
+        </div>
+        <div class="collapsible-body">
+          <span>This is the second area</span>
+        </div>
       </li>
       <li>
-        <a href="#!">4</a>
-      </li>
-      <li>
-        <a href="#!">5</a>
-      </li>
-      <li>
-        <a href="#!">
-          <i></i>
-        </a>
+        <div class="collapsible-header">
+          <i class="material-icons">info</i>Third
+        </div>
+        <div class="collapsible-body">
+          <span>This is the third area</span>
+        </div>
       </li>
     </ul>
 
@@ -221,7 +206,10 @@
 
       // JAVASCRIPT START HERE //
 
-
+      $('.collapsible').collapsible({
+        onOpen: function () { alert('Open') },
+        onClose: function () { alert('Close') }
+      });
 
 
     });

@@ -6,22 +6,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="css/style.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Materialize Sandbox</title>
-  <style>
-    .input-field {
-      margin-bottom: 30px;
-    }
-  </style>
 </head>
 
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Basic Form & Input</h1>
+      <h1 class="center-align">Basic Typography</h1>
     </div>
   </div>
   <div class="container">
@@ -128,85 +124,46 @@
     <br>
 
     <!-- START HERE -->
-    <form>
-      <!-- TEXT FIELD -->
-      <div>
-        <input placeholder="Name" id="name" type="text">
-        <label for="name">Name</label>
-      </div>
 
-      <!-- VALUE & DISABLED -->
-      <div>
-        <input placeholder="Email" id="email" type="email">
-        <label for="email">Email</label>
-      </div>
+    <!-- HEADINGS -->
+    <h1>Heading One</h1>
+    <h2>Heading Two</h2>
+    <h3>Heading Three</h3>
+    <h4>Heading Four</h4>
+    <h5>Heading Five</h5>
+    <!-- PARAGRAPH -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate at maxime pariatur, odit ipsa doloribus.</p>
 
-      <!-- TEXTAREA -->
-      <div>
-        <textarea placeholder="Message" id="message"></textarea>
-        <label for="message">Message</label>
-      </div>
+    <!-- BLOCKQUOTE -->
+    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
 
-      <!-- INLINE FIELD -->
-      Number of users:
-      <div>
-        <input id="users" type="text">
-        <label for="users">#</label>
-      </div>
+    <!-- FLOW TEXT -->
+    <p class="flow-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex non vero nemo minima corporisullam blanditiis consequuntur,
+      est ab.</p>
 
-      <!-- ICON PREFIX -->
-      <div>
-        <input id="phone" type="tel">
-        <label for="phone">Phone Number</label>
-      </div>
+    <!-- TEXT ALIGNMENT -->
+    <div>
+      <h5 class="left-align">Left aligned text</h5>
+    </div>
+    <div>
+      <h5 class="right-align">Right aligned text</h5>
+    </div>
+    <div class="center-align">
+      <h5>Center aligned text</h5>
+    </div>
 
-      <!-- VALIDATION & ERROR -->
-      <div>
-        <input placeholder="Email" id="email" type="email">
-        <label for="email">Email</label>
-      </div>
+    <!-- VERTICAL ALIGNMENT -->
+    <div class="valign-wrapper" style="height: 400px; background: #f4f4f4">
+      <h5>This should be vertically aligned</h5>
+    </div>
 
-      <!-- SELECT (Must be initialized) -->
-      <div>
-        <select>
-
-        </select>
-        <label>Select List</label>
-      </div>
-
-      <!-- OPTION GROUPS -->
-      <div>
-        <select>
-
-        </select>
-        <label>Multiple Select</label>
-      </div>
-
-      <!-- MULTIPLE SELECT -->
-      <div>
-        <select>
-
-        </select>
-        <label>Multiple Select</label>
-      </div>
-
-      <!-- RADIO BUTTONS -->
-
-      <br>
-      <br>
-
-      <!-- CHECKBOXES -->
-
-
-      <br>
-      <br>
-      <div>
-        <input type="submit" value="Submit" class="btn">
-      </div>
-    </form>
-
-
-
+    <!-- QUICK FLOATS -->
+    <p class="left">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, qui?</p>
+    <p class="right">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, qui?</p>
+    <div class="clearfix"></div>
+    <!-- CLEAR FLOATS -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nulla!</p>
     <!-- END HERE -->
 
 
@@ -218,7 +175,7 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-
+  <script type="text/javascript" src="js/test.js"></script>
   <script>
     $(document).ready(function () {
       $('.dropdown-button').dropdown({

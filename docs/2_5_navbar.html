@@ -11,18 +11,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Materialize Sandbox</title>
-
-  <style>
-    .carousel .carousel-item {
-      width: 100%;
-    }
-  </style>
 </head>
 
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Tabs</h1>
+      <h1 class="center-align">Navbar</h1>
     </div>
   </div>
   <div class="container">
@@ -128,69 +122,147 @@
     <br>
     <br>
 
-    <!-- START HERE -->
-
-    <!-- TABS -->
-    <div class="row">
-      <div class="col s12">
-        <ul>
-          <li>
-            <a>Tab 1</a>
-          </li>
-          <li>
-            <a>Tab 2</a>
-          </li>
-          <li>
-            <a>Tab 3</a>
-          </li>
-          <li>
-            <a>Tab 4</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col s12">
-        <h3>Tab 1</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorem!</p>
-      </div>
-      <div class="col s12">
-        <h3>Tab 2</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias ipsa consectetur magnam suscipit omnis labore voluptatem</p>
-        ea itaque provident eos?</div>
-      <div class="col s12">
-        <h3>Tab 3</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quisquam ipsum distinctio odit dolore asperiores</p>
-        doloremque dolorem recusandae nihil minus.</div>
-      <div class="col s12">
-        <h3>Tab 4</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ducimus id hic nostrum sequi excepturi facilis
-          iusto, et voluptate tempora</p>
-      </div>
-    </div>
-
-    <!-- SWIPABLE TABS -->
-    <ul>
-      <li>
-        <a>Test 1</a>
-      </li>
-      <li>
-        <a>Test 2</a>
-      </li>
-      <li>
-        <a>Test 3</a>
-      </li>
-    </ul>
-    <div>Test 1</div>
-    <div>Test 2</div>
-    <div>Test 3</div>
-
-
-    <!-- END HERE -->
-
-
   </div>
   <!-- ./ CONTAINER END -->
 
+  <!-- START HERE -->
 
+  <!-- STANDARD MENU -->
+  <nav>
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-small-and-down">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="active">
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+  <br>
+
+  <!-- RESPONSIVE WITH SIDE MENU -->
+  <nav class="blue darken-4">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Logo</a>
+        <a class="button-collapse" data-activates="mobile-nav" href="#">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+
+          <!-- DROPDOWN TRIGGER -->
+          <li>
+            <a class="dropdown-button" data-activates="my-dropdown" href="#!">Dropdown
+              <i class="material-icons right">arrow_drop_down</i>
+            </a>
+          </li>
+          <!-- BUTTON LINK -->
+          <li>
+            <a class="btn waves-effect waves-light">Login</a>
+          </li>
+          <!-- ICON LINK -->
+          <li>
+            <a href="#">
+              <i class="material-icons">person</i>
+            </a>
+          </li>
+        </ul>
+        <ul class="side-nav" id="mobile-nav">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- DROPDOWN MENU -->
+  <ul id="my-dropdown" class="dropdown-content">
+    <li>
+      <a href="#">Link 1</a>
+    </li>
+    <li>
+      <a href="#">Link 2</a>
+    </li>
+    <li>
+      <a href="#">Link 3</a>
+    </li>
+  </ul>
+
+  <br>
+  <br>
+
+  <!-- FIXED NAVBAR -->
+  <div class="navbar-fixed">
+    <nav class="black">
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo center">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-small-and-down">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li class="active">
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <br>
+  <br>
+
+  <!-- SEARCH BAR -->
+  <nav class="green">
+    <div class="nav-wrapper">
+      <form>
+        <div class="input-field">
+          <input type="search" id="search" required>
+          <label for="search" class="label-icon">
+            <i class="material-icons">search</i>
+          </label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
+
+
+
+  <!-- END HERE -->
+
+  <!-- MOVES CONTENT UP -->
+  <div style="margin-top: 1000px;"></div>
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -205,8 +277,9 @@
         alignment: 'left'
       });
 
-      // JAVASCRIPT START HERE
+      // JAVASCRIPT START HERE //
 
+      $('.button-collapse').sideNav();
 
 
     });

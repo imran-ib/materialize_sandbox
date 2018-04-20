@@ -6,7 +6,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-  <link rel="stylesheet" href="css/style.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Basic Typography</h1>
+      <h1 class="center-align">Scrollspy</h1>
     </div>
   </div>
   <div class="container">
@@ -125,41 +124,52 @@
 
     <!-- START HERE -->
 
-    <!-- HEADINGS -->
+    <!-- SCROLLSPY -->
+    <div class="row">
+      <div class="col m9 l10 s12">
+        <div id="who" class="section scrollspy">
+          <h4>Who Are We?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
+            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
+            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
+          </p>
+        </div>
 
-    <!-- PARAGRAPH -->
+        <div id="what" class="section scrollspy">
+          <h4>What Do We Do?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
+            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
+            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
+          </p>
+        </div>
 
-
-    <!-- BLOCKQUOTE -->
-
-
-    <!-- FLOW TEXT -->
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ex non vero nemo minima corporisullam blanditiis consequuntur,
-      est ab.</p>
-
-    <!-- TEXT ALIGNMENT -->
-    <div>
-      <h5>Left aligned text</h5>
+        <div id="where" class="section scrollspy">
+          <h4>Where Are We?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
+            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
+            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,Lorem
+            ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis, dolorem
+            excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati sequi
+            fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
+          </p>
+        </div>
+      </div>
+      <div class="col hide-on-small-only m3 l2 s12">
+        <ul class="pinned section table-of-contents">
+          <li>
+            <a href="#who">Who We Are</a>
+          </li>
+          <li>
+            <a href="#what">What We Do</a>
+          </li>
+          <li>
+            <a href="#where">Where We Are</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <h5>Right aligned text</h5>
-    </div>
-    <div>
-      <h5>Center aligned text</h5>
-    </div>
+    <div style="margin-top:700px;"></div>
 
-    <!-- VERTICAL ALIGNMENT -->
-    <div>
-      <h5>This should be vertically aligned</h5>
-    </div>
-
-    <!-- QUICK FLOATS -->
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, qui?</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, qui?</p>
-    <div></div>
-    <!-- CLEAR FLOATS -->
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nulla!</p>
     <!-- END HERE -->
 
 
@@ -171,7 +181,7 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/test.js"></script>
+
   <script>
     $(document).ready(function () {
       $('.dropdown-button').dropdown({
@@ -181,10 +191,8 @@
         alignment: 'left'
       });
 
-      // JAVASCRIPT START HERE //
-
-
-
+      // SCROLLSPY INIT
+      $('.scrollspy').scrollSpy();
 
     });
   </script>

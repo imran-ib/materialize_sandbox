@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Scrollspy</h1>
+      <h1 class="center-align">Feature Discovery</h1>
     </div>
   </div>
   <div class="container">
@@ -124,51 +124,31 @@
 
     <!-- START HERE -->
 
-    <!-- SCROLLSPY -->
-    <div class="row">
-      <div class="col m9 l10 s12">
-        <div>
-          <h4>Who Are We?</h4>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
-            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
-            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
-          </p>
-        </div>
+    <!-- FEATURE DISCOVERY -->
+    <a class="wave-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open Tap Target</a>
+    <a onclick="$('.tap-target').tapTarget('close')" class="wave-effect waves-light btn">Close Tap Target</a>
 
-        <div>
-          <h4>What Do We Do?</h4>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
-            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
-            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
-          </p>
-        </div>
+    <div class="fixed-action-btn">
+      <a id="menu" class="btn btn-floating btn-large cyan">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
 
-        <div>
-          <h4>Where Are We?</h4>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis,
-            dolorem excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati
-            sequi fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,Lorem
-            ipsum dolor sit amet consectetur, adipisicing elit. Facilis laborum tenetur tempora quo ipsum! Nisi nobis, dolorem
-            excepturi quia rem architecto cupiditate repudiandae delectus nihil, commodi, accusamus corrupti obcaecati sequi
-            fuga a ipsum. Labore earum corrupti voluptatibus placeat blanditiis saepe, id officiis quas nesciunt. Voluptate,
-          </p>
+    <div class="tap-target-wrapper">
+      <div class="tap-target cyan" data-activates="menu">
+        <div class="tap-target-content white-text">
+          <h5>Hello World</h5>
+          <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident cupiditate dolores. Impedit cum asperiores
+            a aspernatur ullam esse id!</p>
         </div>
       </div>
-      <div class="col hide-on-small-only m3 l2 s12">
-        <ul>
-          <li>
-            <a>Who We Are</a>
-          </li>
-          <li>
-            <a>What We Do</a>
-          </li>
-          <li>
-            <a>Where We Are</a>
-          </li>
-        </ul>
+      <div class="tap-target-wave">
+        <a class="btn btn-floating btn-large cyan tap-target-origin">
+          <i class="material-icons">menu</i>
+        </a>
       </div>
     </div>
-    <div style="margin-top:700px;"></div>
+
 
     <!-- END HERE -->
 
@@ -191,7 +171,11 @@
         alignment: 'left'
       });
 
-     
+      // JAVASCRIPT START HERE //
+
+
+
+
     });
   </script>
 </body>

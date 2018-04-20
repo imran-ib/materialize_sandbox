@@ -16,7 +16,7 @@
 <body>
   <div class="row">
     <div class="col s12">
-      <h1 class="center-align">Preloaders</h1>
+      <h1 class="center-align">Parallax</h1>
     </div>
   </div>
   <div class="container">
@@ -123,84 +123,26 @@
     <br>
 
     <!-- START HERE -->
-    <div class="row">
-      <div class="col s12 m6">
 
-        <!-- DETERMINATE PROGRESS -->
-        <div>
-          <div></div>
-        </div>
-
-      </div>
-      <div class="col s12 m6">
-
-        <!-- INDETERMINATE PROGRESS -->
-        <div>
-          <div></div>
-        </div>
-
+    <!-- PARALLAX -->
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="img/img1.jpg">
       </div>
     </div>
-
-    <div class="row">
-      <div class="col s12 m4">
-
-        <!-- SMALL RED -->
-        <div>
-          <div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="col s12 m4">
-
-        <!-- STANDARD BLUE -->
-        <div>
-          <div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="col s12 m4">
-
-        <!-- BIG YELLOW -->
-        <div>
-          <div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-
+    <div class="section white">
+      <div class="row container">
+        <h2 class="header">Parallax Example</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores doloremque accusantium veniam modi ea non quisquam
+          corporis. Doloremque error, dolore, perspiciatis reprehenderit soluta vitae, at quisquam dolorum sequi quidem veritatis
+          amet earum nihil illo dignissimos dicta! Hic nesciunt animi distinctio!</p>
       </div>
     </div>
-
-
-    <!-- FLASHING COLORS -->
+    <div class="parallax-container">
+      <div class="parallax">
+        <img src="img/img2.jpg">
+      </div>
+    </div>
 
 
     <!-- END HERE -->
@@ -224,8 +166,9 @@
         alignment: 'left'
       });
 
-      // JAVASCRIPT START HERE //
 
+      // JAVASCRIPT START HERE //
+      $('.parallax').parallax();
 
 
 
